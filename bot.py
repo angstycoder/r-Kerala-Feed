@@ -1,6 +1,7 @@
 from os import getenv as e
 from discord.errors import LoginFailure
 from discord.ext.commands.errors import ExtensionFailed
+from discord.ext import commands
 
 bot = commands.Bot(command_prefix='?', description='Multi-purpose Discord Bot', case_insensitive=True)
 
