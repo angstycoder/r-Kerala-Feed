@@ -21,7 +21,7 @@ class Remind(commands.Cog):
     def cog_unload(self):
         self.feed.cancel()
 
-    @tasks.loop(seconds=5)
+    @tasks.loop(hours=1.0)
     async def feed(self):
         post = Embed(color=0xFF5700)
         for submission in reddit.subreddit("kerala").new(limit=1):
